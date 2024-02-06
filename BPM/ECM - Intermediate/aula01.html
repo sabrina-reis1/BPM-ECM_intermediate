@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+        <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+        <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+        <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="fluig-style-guide">
+            <form name="form" role="form">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Requisitante</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome" class="form-control">
+                            </div>
+                            
+                            <div class="form-group col-md-4">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+        
+                            <div class="form-group col-md-2">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" name="telefone" id="telefone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="documentoIdentidade">Documento de Identidade</label>
+                                <input type="text" name="documentoIdentidade" id="documentoIdentidade" class="form-control">
+                            </div>
+                            
+                            <div class="form-group col-md-2">
+                                <label for="dataNascimento">Data de nascimento</label>
+                                <input type="text" name="dataNascimento" id="dataNascimento" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Ponto Comercial</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Responsável</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="tipoPonto">Tipo do ponto</label>
+                                <div class="radio">
+                                    <label><input type="radio" name="tipoPonto" id="tipoPonto" value="quiosque">Quiosque</label>
+                                    <label><input type="radio" name="tipoPonto" id="tipoPonto1" value="Loja">Loja</label>
+                                </div>
+                            </div>
+        
+                            <div class="form-group col-md-4">
+                                <label for="checkbox">Dias de funcionamento</label>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="Domingo">Dom</label>
+                                    <label><input type="checkbox" name="Segunda">Seg</label>
+                                    <label><input type="checkbox" name="Terca">Ter</label>
+                                    <label><input type="checkbox" name="Quarta">Qua</label>
+                                    <label><input type="checkbox" name="Quinta">Qui</label>
+                                    <label><input type="checkbox" name="Sexta">Sex</label>
+                                    <label><input type="checkbox" name="Sabado">Sab</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="cep">CEP</label>
+                                <input type="text" name="cep" id="cep" class="form-control" mask="00000-000">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="logradouro">Logradouro</label>
+                                <input type="text" name="logradouro" id="logradouro" class="form-control">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="numero">Número</label>
+                                <input type="text" name="numero" id="numero" class="form-control">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" name="bairro" id="bairro" class="form-control">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" name="cidade" id="cidade" class="form-control">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="estado">Estado</label>
+                                <input type="text" name="estado" id="estado" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Responsáveis</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table tablename="responsaveisTabela" class="table tablee-hover" addbuttonlabel="Adicionar Responsável" addbuttonclass="btn btn-info">
+                            <thead>
+                                <tr>
+                                    <td>Responsáveis</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input
+                                        type="zoom"
+                                        id = "responsavel"
+                                        name="responsavel"
+                                        data-zoom="{
+                                            'displayKey':'colleagueNome',
+                                            'datasetId':'colleague',
+                                            'placeholder':'Escolha o usuário',
+                                            'fields':[
+                                                {
+                                                'field':'colleagueId',
+                                                'label':'ID'
+                                                },{
+                                                'field':'colleagueName',
+                                                'label':'Nome',
+                                                'standard':'true'
+                                                },{
+                                                'field':'login',
+                                                'label':'Login'
+                                                }
+                                            ]
+                                        }"
+                                    /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="informacoes">Informações Adicionais</label>
+                        <textarea rows="5" name="informacoes" id="informacoes" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Financeiro</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="valor">Valor</label>
+                                <input type="number" name="valor" id="valor" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script type="text/javascript" src="cep.js"></script>
+        <script type="text/javascript" src="events/validateForm.js"></script>
+        <script type="text/javascript" src="events/displayFields.js"></script>
+
+        <script type="text/javascript">
+            var calendarioDataNascimento = FLUIGC.calendar('#dataNascimento');
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções e eventos</title>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p id="demo">Meu parágrafo</p>
+    <button type="button" onclick="myFunction()">Alterar</button>
+    <br>
+    <br>
+
+    <select onchange="muda()">
+        <option>Jõao</option>
+        <option>Maria</option>
+    </select>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Texto alterado.";
+        }
+
+        function muda() {
+            document.getElementById("demo").innerHTML = "Nome no select alterado.";
+        }
+    </script>
+</body>
+</html>
